@@ -52,7 +52,6 @@ public class CucumberJvmRunnerMojo extends AbstractMojo {
     private static final String DEFAULT_SRC_DIR_PATH = "/generated-test-sources/cucumber-runners";
 
     public void execute() throws MojoExecutionException, MojoFailureException {
-
         Resource testResource = (Resource) project.getTestResources().get(0);
         testResourceDir = Paths.get(testResource.getDirectory());
 
@@ -82,6 +81,8 @@ public class CucumberJvmRunnerMojo extends AbstractMojo {
         if (generatedSourcePath == null) {
             generatedSourcePath = new File(project.getBuild().getDirectory() + DEFAULT_SRC_DIR_PATH);
         }
+
+        project.addTestCompileSourceRoot(generatedSourcePath.getAbsolutePath());
 
         getLog().info("Generated source files directory: " + generatedSourcePath.getAbsolutePath());
 

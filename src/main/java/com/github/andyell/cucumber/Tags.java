@@ -16,7 +16,7 @@ public class Tags {
         if ((include == null || include.length() == 0)
                 && (exclude == null || exclude.length() == 0)) {
 
-            return "";
+            return "@complete";
         }
 
         if (exclude == null || exclude.length() == 0) {

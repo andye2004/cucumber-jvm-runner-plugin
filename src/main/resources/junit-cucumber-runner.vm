@@ -4,13 +4,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    dryRun = $dryRun,
-    strict = $strict,
-    monochrome = $monochrome,
-    glue = {$glue},
-    tags = {$tags},
-    features = {$feature},
-    plugin = {$plugin},
-    name = {$name}
+dryRun = $dryRun,
+strict = $strict,
+monochrome = $monochrome,
+glue = {$glue},
+tags = {$tags},
+features = {$feature},
+plugin = {$plugin},
+name = {$name}
 )
 public class $class {}
